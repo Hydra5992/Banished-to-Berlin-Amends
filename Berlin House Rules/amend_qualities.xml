@@ -1,0 +1,414 @@
+<!-- Unrestricted Kill Code Qualities -->
+<chummer>
+  <qualities>
+    <!-- Region Kill Code Technomancer Qualties -->
+    <quality>
+      <name>Hold the Door</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Lone Wolf</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Team Player</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Trust Data, Not Lore</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Trust Lore, Not Data</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Unique Avatar</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Code of Honor: Black Hat</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Escaped Custody</name>
+      <required>
+        <allof>
+          <quality amendoperation="remove">Technomancer</quality>
+        </allof>
+      </required>
+    </quality>
+    <quality>
+      <name>On the Wagon</name>
+      <required amendoperation="remove" />
+    </quality>
+    <quality>
+      <name>Wired User</name>
+      <required amendoperation="remove" />
+    </quality>
+    <!-- End Region -->
+    <quality> Special Modifications
+      <name>Special Modifications</name>
+      <limit>3</limit>
+      <bonus amendoperation="remove" />
+    </quality>	
+    <quality>
+      <name>Special Modifications (Prototype Materials)</name>
+      <hide />
+    </quality>
+    <quality> <!-- Prototype Transhuman -->
+      <id>08c4dfad-3661-48d9-a265-43cce84e20d8</id>
+      <bonus amendoperation="replace">
+        <prototypetranshuman>1</prototypetranshuman>
+        <selectquality>
+          <quality>Allergy (Common, Mild)</quality>
+          <quality>Allergy (Uncommon, Moderate)</quality>
+          <quality>Astral Beacon</quality>
+          <quality>Blighted (12 Months)</quality>
+          <quality>Blind</quality>
+          <quality>Deaf</quality>
+          <quality>Dimmer Bulb</quality>
+          <quality>Illness</quality>
+          <quality>Incomplete Deprogramming</quality>
+          <quality>Insomnia (Basic)</quality>
+          <quality>Low Pain Tolerance</quality>
+          <quality>Paraplegic</quality>
+          <quality>Phobia (Common, Moderate)</quality>
+          <quality>Poor Self Control (Combat Monster)</quality>
+          <quality>Poor Self Control (Compulsive III, Public Broad Aspect)</quality>
+          <quality>Poor Self Control (Compulsive IV, Personal)</quality>
+          <quality>Reduce Sense (Touch)</quality>
+          <quality>Wanted</quality>
+          <quality>Weak Immune System </quality>
+        </selectquality>
+      </bonus>
+    </quality>
+    <quality> <!-- Lightning Reflexes -->
+      <id>3564b678-7721-4a8d-ac79-1600cf92dc14</id>
+      <bonus amendoperation="replace">
+        <dodge>1</dodge>
+        <initiative>1</initiative>
+        <initiativepass>1</initiativepass>
+      </bonus>
+    </quality>
+    <quality> <!-- Mentor Spirit -->
+      <id>ced3fecf-2277-4b20-b1e0-894162ca9ae2</id>
+      <required amendoperation="replace">
+        <oneof>
+          <quality>Adept</quality>
+          <quality>Aspected Magician</quality>
+          <quality>Aware</quality>
+          <quality>Enchanter</quality>
+          <quality>Explorer</quality>
+          <quality>Apprentice</quality>
+          <quality>Magician</quality>
+          <quality>Mystic Adept</quality>
+          <quality>Infected: Bandersnatch</quality>
+		  <quality>Infected: Banshee</quality>
+		  <quality>Infected: Dzoo-Noo-Qua</quality>
+		  <quality>Infected: Fomoraig</quality>
+		  <quality>Infected: Ghoul (Dwarf)</quality>
+		  <quality>Infected: Ghoul (Elf)</quality>
+		  <quality>Infected: Ghoul (Human)</quality>
+		  <quality>Infected: Ghoul (Ork)</quality>
+		  <quality>Infected: Ghoul (Sasquatch)</quality>
+		  <quality>Infected: Ghoul (Troll)</quality>
+		  <quality>Infected: Gnawer</quality>
+		  <quality>Infected: Goblin</quality>
+		  <quality>Infected: Grendel</quality>
+		  <quality>Infected: Harvester</quality>
+		  <quality>Infected: Loup-Garou</quality>
+		  <quality>Infected: Mutaqua</quality>
+		  <quality>Infected: Nosferatu</quality>
+		  <quality>Infected: Vampire (Human)</quality>
+		  <quality>Infected: Vampire (Non-Human)</quality>
+		  <quality>Infected: Sukuyan (Human)</quality>
+		  <quality>Infected: Sukuyan (Non-Human)</quality>
+          <quality>Infected: Wendigo</quality>
+		  <metatype>Naga</metatype>
+          <metatype>Pixie</metatype>
+          <metatype>Centaur</metatype>
+          <metatype>Sasquatch</metatype>
+          <metatypecategory>Shapeshifter</metatypecategory>
+        </oneof>
+      </required>
+    </quality>
+	<quality> <!-- Witness My Hate -->
+      <id>f8af38e2-e79a-44f9-8e72-57aba35b7056</id>
+      <required>
+        <oneof amendoperation="replace">
+          <quality>Aspected Magician</quality>
+          <quality>Magician</quality>
+		  <quality>Mystic Adept</quality>
+        </oneof>
+      </required>
+    </quality>
+	<quality> <!-- SINner (Corporate) -->
+      <id>e00623e1-54b0-4a91-b234-3c7e141deef4</id>
+      <karma>-10</karma>
+    </quality>
+    <quality> <!-- SINner (National) -->
+      <id>9ac85feb-ae1e-4996-8514-3570d411e1d5</id>
+      <karma>-10</karma>
+    </quality>
+    <quality> <!-- SINner (Corporate Limited) -->
+      <id>318d2edd-833b-48c5-a3e1-343bf03848a5</id>
+      <karma>-20</karma>
+    </quality>
+    <quality> <!-- SINner (Criminal) -->
+      <id>d9479e5c-d44a-45b9-8fb4-d1e08a9487b2</id>
+      <karma>-15</karma>
+    </quality>
+    <quality> <!-- Ex-Con -->
+      <id>4fe8fa5e-e31b-4126-a880-3e719a0a5820</id>
+      <name>Ex-Con</name>
+      <karma>-20</karma>
+    </quality>
+    <!-- Region Banned Positive Qualities -->
+    <quality>
+      <name>Erased</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Barehanded Adept</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Better to be Feared Than Loved</name>
+      <hide />
+    </quality>	
+    <quality>
+      <name>Community Connection</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dark Ally</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Erased</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Friends in High Places</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Groveler</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Revels in Murder</name>
+      <hide />
+    </quality>
+	<!-- Blood Crystal qualities start -->
+    <quality>
+      <name>Crystal Breath</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Eye (One Eye)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Eye (Two Eyes)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys, Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys, Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys, Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys, Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Jaw</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Limb (Arm)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Limb (Leg)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Spine</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Claws</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Reflexes</name>
+      <hide />
+    </quality>
+	<!-- Blood Crystal qualities finish -->
+    <!-- End Region -->
+    <!-- Region Banned Negative Qualities -->
+    <quality>
+      <name>Groveler</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Bi-polar</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Borrowed Time</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Carrier (HMHVV Strain II)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Carrier (HMHVV Strain III)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Code of Honor: Black Hat</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Consummate Professional</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Data Liberator</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Amnesia (Surface Deletion)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dead Emotion</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dead SIN</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Earther</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Echo Chamber</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Faceless</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Hung out to Dry</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Impassive</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>In Debt</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Information Auctioneer</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Latest and Greatest</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Leeroy Jenkins</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Pregnant</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Quadriplegic</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Resonant Burnout</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Stolen Gear</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>This Is Your Last Chance</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Tough and Targeted</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>'Ware Intolerance</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+  </qualities>
+</chummer>

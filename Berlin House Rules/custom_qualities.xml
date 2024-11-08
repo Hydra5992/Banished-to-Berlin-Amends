@@ -1,0 +1,1580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+    Chummer5a is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Chummer5a is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+    You can obtain the full source code for Chummer5a at
+    https://github.com/chummer5a/chummer5a
+-->
+<chummer>
+	<qualities>
+		<quality>
+			<id>fabe5461-999f-4066-8e18-3a5768d009f2</id>
+			<name>Purity Bonus (Adept)</name>
+			<karma>0</karma>
+			<category>Positive</category>
+			<limit>False</limit>
+			<bonus>
+				<adeptpowerpoints>{MAG}*0.5</adeptpowerpoints>
+			</bonus>
+			<required>
+				<allof>
+					<quality>Adept</quality>
+				</allof>
+			</required>
+			<forbidden>
+				<oneof>
+					<quality>Prototype Transhuman</quality>
+					<ess grade="Used">0.0001</ess>
+					<ess grade="Standard">0.0001</ess>
+					<ess grade="Alphaware">0.0001</ess>
+					<ess grade="Betaware">0.0001</ess>
+					<ess grade="Deltaware">0.0001</ess>
+					<ess grade="Gammaware">0.0001</ess>
+					<ess grade="Omegaware">0.0001</ess>
+				</oneof>
+			</forbidden>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>If ever your Magic rating changes, you must remove and re-add this quality to ensure your power points are properly calculated.</notes>
+		</quality>
+		<quality> <!-- bodyguard -->
+			<id>9754ad0e-be2d-4028-94c9-d62b53a030ba</id>
+			<name>Bodyguard</name>
+			<karma>15</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<attributetotal>
+						<attributes>{CHA}+{INT}</attributes>
+						<val>7</val>
+					</attributetotal>
+				</oneof>
+				<oneof>
+					<skill>
+						<name>Perception</name>
+						<val>5</val>
+					</skill>
+					<skill>
+						<name>Electronic Warfare</name>
+						<val>5</val>
+					</skill>
+				</oneof>
+				<oneof>
+					<skill>
+						<name>Pistols</name>
+						<val>5</val>
+					</skill>
+					<skill>
+						<name>Throwing Weapons</name>
+						<val>5</val>
+					</skill>
+					<skill>
+						<name>Blades</name>
+						<val>5</val>
+					</skill>
+					<skill>
+						<name>Clubs</name>
+						<val>5</val>
+					</skill>
+					<skill>
+						<name>Unarmed Combat</name>
+						<val>5</val>
+					</skill>
+				</oneof>
+			</required>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality apply a +2 dice pool modifier to Perception tests and Electronic Warfare tests involving the use of a sensor. In addition, the character may Ready Weapon or Take Aim as a Free Action.</notes>
+		</quality>
+<quality>
+<id>fba5249b-bdf2-4534-93c7-1c2587d5bb8e</id>
+<name>Renaissance Man</name>
+<karma>4</karma>
+<category>Positive</category>
+<bonus>
+<skillcategorykarmacost>
+<name>Interest</name>
+<val>-1</val>
+<min>3</min>
+<condition>career</condition>
+</skillcategorykarmacost>
+<skillcategorykarmacostmultiplier>
+<name>Interest</name>
+<val>50</val>
+<condition>create</condition>
+</skillcategorykarmacostmultiplier>
+<skillcategorypointcostmultiplier>
+<name>Interest</name>
+<val>50</val>
+</skillcategorypointcostmultiplier>
+<skillcategoryspecializationkarmacostmultiplier>
+<name>Interest</name>
+<val>50</val>
+<condition>create</condition>
+</skillcategoryspecializationkarmacostmultiplier>
+</bonus>
+<source>SR5</source>
+<page>5</page>
+</quality>
+		<quality> <!-- merc -->
+			<id>29603823-f73c-4736-8a06-daffb9ab3bcc</id>
+			<name>Merc</name>
+			<karma>5</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<skilltotal>
+						<skills>Gymnastics+Running+Swimming+Blades+Clubs+Unarmed Combat+Automatics+Longarms+Pistols+Navigation+Surival+Tracking</skills>
+						<val>12</val>
+					</skilltotal>
+				</oneof>
+			</required>
+			<bonus />
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality suffer only a –1 penalty on Ranged Combat for Attacker Running and increase by 1 any bonus they received on Ranged Defense tests for cover (eg. Partial Cover provides a +3, Good Cover provides a +5).</notes>
+		</quality>
+		<quality> <!-- panzer fear/wound -->
+			<id>72ef0d2c-84c0-4f38-89b2-5ef89758822d</id>
+			<name>Panzer (Fear/Wound)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Panzer (Fear/Soak)</quality>
+					<quality>Panzer (Intimdate/Wound)</quality>
+					<quality>Panzer (Intimdate/Soak)</quality>
+					<bioware>Damage Compensators</bioware>
+					<quality>High Pain Tolerance</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<attribute>
+						<name>BOD</name>
+						<total>5</total>
+					</attribute>
+					<group>
+						<cyberware>Bone Lacing (Plastic)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>4</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Aluminum)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>3</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Titanium)</cyberware>
+						<attribute>
+							<name>BOD</name>
+						<total>2</total>
+						</attribute>
+					</group>
+					<bioware>Bone Density Augmentation</bioware>
+				</oneof>
+				<oneof>
+					<cyberware>Armor</cyberware>
+					<bioware>Bone Density Augmentation</bioware>
+					<cyberware>Bone Lacing (Plastic)</cyberware>
+					<cyberware>Bone Lacing (Aluminum)</cyberware>
+					<cyberware>Bone Lacing (Titanium)</cyberware>
+					<cyberware>Dermal Plating</cyberware>
+					<bioware>Orthoskin</bioware>
+					<cyberware>Smartskin</cyberware>
+				</oneof>
+			</required>
+			<bonus>
+				<conditionmonitor>
+					<thresholdoffset>2</thresholdoffset>
+				</conditionmonitor>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality receive a +2 dice pool modifier to resist fear and intimidation, including magically induced fear from spells or critter powers or they may substitute their Body attribute for Charisma when calculating their Intimidation dice pool (choose one). In addition, they may ignore two boxes of damage when calculating wound modifiers (which cannot be combined with other forms of wound modifier reduction, such as High Pain Tolerance) or they receive a +1 dice pool modifier to Body when making Damage Resistance tests (choose one).</notes>
+		</quality>
+		<quality> <!-- panzer fear/soak -->
+			<id>c6ec1c1f-99aa-43bc-b1cc-8cacd15df862</id>
+			<name>Panzer (Fear/Soak)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Panzer (Fear/Wound)</quality>
+					<quality>Panzer (Intimdate/Wound)</quality>
+					<quality>Panzer (Intimdate/Soak)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<attribute>
+						<name>BOD</name>
+						<total>5</total>
+					</attribute>
+					<group>
+						<cyberware>Bone Lacing (Plastic)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>4</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Aluminum)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>3</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Titanium)</cyberware>
+						<attribute>
+							<name>BOD</name>
+						<total>2</total>
+						</attribute>
+					</group>
+					<bioware>Bone Density Augmentation</bioware>
+				</oneof>
+				<oneof>
+					<cyberware>Armor</cyberware>
+					<bioware>Bone Density Augmentation</bioware>
+					<cyberware>Bone Lacing (Plastic)</cyberware>
+					<cyberware>Bone Lacing (Aluminum)</cyberware>
+					<cyberware>Bone Lacing (Titanium)</cyberware>
+					<cyberware>Dermal Plating</cyberware>
+					<bioware>Orthoskin</bioware>
+					<cyberware>Smartskin</cyberware>
+				</oneof>
+			</required>
+			<bonus>
+				<damageresistance>1</damageresistance>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality receive a +2 dice pool modifier to resist fear and intimidation, including magically induced fear from spells or critter powers or they may substitute their Body attribute for Charisma when calculating their Intimidation dice pool (choose one). In addition, they may ignore two boxes of damage when calculating wound modifiers (which cannot be combined with other forms of wound modifier reduction, such as High Pain Tolerance) or they receive a +1 dice pool modifier to Body when making Damage Resistance tests (choose one).</notes>
+		</quality>
+		<quality> <!-- panzer intimdate/wound -->
+			<id>30921358-0cb7-424b-b06b-db2d608b5c6e</id>
+			<name>Panzer (Intimdate/Wound)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Panzer (Fear/Wound)</quality>
+					<quality>Panzer (Fear/Soak)</quality>
+					<quality>Panzer (Intimdate/Soak)</quality>
+					<bioware>Damage Compensators</bioware>
+					<quality>High Pain Tolerance</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<attribute>
+						<name>BOD</name>
+						<total>5</total>
+					</attribute>
+					<group>
+						<cyberware>Bone Lacing (Plastic)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>4</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Aluminum)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>3</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Titanium)</cyberware>
+						<attribute>
+							<name>BOD</name>
+						<total>2</total>
+						</attribute>
+					</group>
+					<bioware>Bone Density Augmentation</bioware>
+				</oneof>
+				<oneof>
+					<cyberware>Armor</cyberware>
+					<bioware>Bone Density Augmentation</bioware>
+					<cyberware>Bone Lacing (Plastic)</cyberware>
+					<cyberware>Bone Lacing (Aluminum)</cyberware>
+					<cyberware>Bone Lacing (Titanium)</cyberware>
+					<cyberware>Dermal Plating</cyberware>
+					<bioware>Orthoskin</bioware>
+					<cyberware>Smartskin</cyberware>
+				</oneof>
+			</required>
+			<bonus>
+				<swapskillattribute>
+					<attribute>BOD</attribute>
+					<limittoskill>Intimidation</limittoskill>
+				</swapskillattribute>
+				<conditionmonitor>
+					<thresholdoffset>2</thresholdoffset>
+				</conditionmonitor>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality receive a +2 dice pool modifier to resist fear and intimidation, including magically induced fear from spells or critter powers or they may substitute their Body attribute for Charisma when calculating their Intimidation dice pool (choose one). In addition, they may ignore two boxes of damage when calculating wound modifiers (which cannot be combined with other forms of wound modifier reduction, such as High Pain Tolerance) or they receive a +1 dice pool modifier to Body when making Damage Resistance tests (choose one).</notes>
+		</quality>
+		<quality> <!-- panzer intimdate/soak -->
+			<id>26bd12b9-f4bb-4e63-a5e3-5bc1d5a4cfa5</id>
+			<name>Panzer (Intimdate/Soak)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Panzer (Fear/Wound)</quality>
+					<quality>Panzer (Fear/Soak)</quality>
+					<quality>Panzer (Intimdate/Wound)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<attribute>
+						<name>BOD</name>
+						<total>5</total>
+					</attribute>
+					<group>
+						<cyberware>Bone Lacing (Plastic)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>4</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Aluminum)</cyberware>
+						<attribute>
+							<name>BOD</name>
+							<total>3</total>
+						</attribute>
+					</group>
+					<group>
+						<cyberware>Bone Lacing (Titanium)</cyberware>
+						<attribute>
+							<name>BOD</name>
+						<total>2</total>
+						</attribute>
+					</group>
+					<bioware>Bone Density Augmentation</bioware>
+				</oneof>
+				<oneof>
+					<cyberware>Armor</cyberware>
+					<bioware>Bone Density Augmentation</bioware>
+					<cyberware>Bone Lacing (Plastic)</cyberware>
+					<cyberware>Bone Lacing (Aluminum)</cyberware>
+					<cyberware>Bone Lacing (Titanium)</cyberware>
+					<cyberware>Dermal Plating</cyberware>
+					<bioware>Orthoskin</bioware>
+					<cyberware>Smartskin</cyberware>
+				</oneof>
+			</required>
+			<bonus>
+				<swapskillattribute>
+					<attribute>BOD</attribute>
+					<limittoskill>Intimidation</limittoskill>
+				</swapskillattribute>
+				<damageresistance>1</damageresistance>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality receive a +2 dice pool modifier to resist fear and intimidation, including magically induced fear from spells or critter powers or they may substitute their Body attribute for Charisma when calculating their Intimidation dice pool (choose one). In addition, they may ignore two boxes of damage when calculating wound modifiers (which cannot be combined with other forms of wound modifier reduction, such as High Pain Tolerance) or they receive a +1 dice pool modifier to Body when making Damage Resistance tests (choose one).</notes>
+		</quality>
+		<quality> <!-- razorboy damage -->
+			<id>501dad13-6915-4a4d-a7f5-f4651d73999e</id>
+			<name>Razorboy (Damage)</name>
+			<karma>10</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Razorboy (Intimidation)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<cyberware>Cybereyes Basic System</cyberware>
+					<cyberware>Obvious Full Arm</cyberware>
+					<cyberware>Obvious Full Leg</cyberware>
+					<cyberware>Obvious Torso</cyberware>
+					<cyberware>Obvious Skull</cyberware>
+					<cyberwarecategory>Cyber Implant Weapon</cyberwarecategory>
+					<biowarecategory>Bio-Weapons</biowarecategory>
+				</oneof>
+			</required>
+			<bonus>
+				<skillcategory>
+					<name>Street</name>
+					<bonus>1</bonus>
+				</skillcategory>
+				<weaponcategorydv>
+					<name>Cyberweapon</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+				<weaponcategorydv>
+					<name>Bio-Weapons</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality may add +2 dice to Intimidation tests or +1 DV with implanted melee weapons or unarmed strikes with cyberlimbs (choose one). In addition, the character may add +1 to any Street Knowledge skill tests.</notes>
+		</quality>
+		<quality> <!-- razorboy intimidation -->
+			<id>96f2b592-c43c-4931-b194-c1dc41a3a833</id>
+			<name>Razorboy (Intimidation)</name>
+			<karma>10</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Razorboy (Damage)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<cyberware>Cybereyes Basic System</cyberware>
+					<cyberware>Obvious Full Arm</cyberware>
+					<cyberware>Obvious Full Leg</cyberware>
+					<cyberware>Obvious Torso</cyberware>
+					<cyberware>Obvious Skull</cyberware>
+					<cyberwarecategory>Cyber Implant Weapon</cyberwarecategory>
+					<biowarecategory>Bio-Weapons</biowarecategory>
+				</oneof>
+			</required>
+			<bonus>
+				<skillcategory>
+					<name>Street</name>
+					<bonus>1</bonus>
+				</skillcategory>
+				<specificskill>
+					<name>Intimidation</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality may add +2 dice to Intimidation tests or +1 DV with implanted melee weapons or unarmed strikes with cyberlimbs (choose one). In addition, the character may add +1 to any Street Knowledge skill tests.</notes>
+		</quality>
+		<quality> <!-- ronin bio/dv -->
+			<id>ba67ba6b-3701-48ce-b0c8-6ca546c63f8e</id>
+			<name>Ronin (Bioware/DV)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Ronin (Cyberware/DV)</quality>
+					<quality>Ronin (Bioware/Defense)</quality>
+					<quality>Ronin (Cyberware/Defense)</quality>
+					<quality>Biocompatibility (Bioware)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>{WIL}+{INT}</attributes>
+						<val>7</val>
+					</attributetotal>
+					<streetcredvsnotoriety />
+				</allof>
+			</required>
+			<bonus>
+				<biowareessmultiplier>90</biowareessmultiplier>
+				<weaponcategorydv>
+					<name>Blades</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+				<weaponcategorydv>
+					<name>Clubs</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+				<weaponcategorydv>
+					<name>Unarmed</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality reduce the Essence Cost of bioware or cyberware implants (choose one) by 10%, rounded down to the tenth. This rebate is cumulative with the reduction offered by the chosen ’ware’s grade, if any (e.g., the reduction for alphaware of 0.8 is reduced by ten percent, or 0.08, to become 0.72, and is rounded down to 0.7). This bonus is applied to already installed augmentations, but will create an appropriately sized essence hole. This discount does not stack with the Biocompatability quality. In addition, they may choose one of the following: +1 DV with melee attacks, including unarmed; or, when they have a melee weapon readied (with which their skill to use in melee is at least 4 ranks) and are not surprised, +2 to defense tests against melee and ranged attacks. If a Ronin’s Notoriety ever overtakes his Street Cred, he maintains his Essence discount but loses the DV or Defense bonus.</notes>
+		</quality>
+		<quality> <!-- ronin cyber/dv -->
+			<id>9b8bd02d-e8ed-47a5-886d-7e9b6b3e4d24</id>
+			<name>Ronin (Cyberware/DV)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Ronin (Bioware/DV)</quality>
+					<quality>Ronin (Bioware/Defense)</quality>
+					<quality>Ronin (Cyberware/Defense)</quality>
+					<quality>Biocompatibility (Cyberware)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>{WIL}+{INT}</attributes>
+						<val>7</val>
+					</attributetotal>
+					<streetcredvsnotoriety />
+				</allof>
+			</required>
+			<bonus>
+				<cyberwareessmultiplier>90</cyberwareessmultiplier>
+				<weaponcategorydv>
+					<name>Blades</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+				<weaponcategorydv>
+					<name>Clubs</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+				<weaponcategorydv>
+					<name>Unarmed</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality reduce the Essence Cost of bioware or cyberware implants (choose one) by 10%, rounded down to the tenth. This rebate is cumulative with the reduction offered by the chosen ’ware’s grade, if any (e.g., the reduction for alphaware of 0.8 is reduced by ten percent, or 0.08, to become 0.72, and is rounded down to 0.7). This bonus is applied to already installed augmentations, but will create an appropriately sized essence hole. This discount does not stack with the Biocompatability quality. In addition, they may choose one of the following: +1 DV with melee attacks, including unarmed; or, when they have a melee weapon readied (with which their skill to use in melee is at least 4 ranks) and are not surprised, +2 to defense tests against melee and ranged attacks. If a Ronin’s Notoriety ever overtakes his Street Cred, he maintains his Essence discount but loses the DV or Defense bonus.</notes>
+		</quality>
+		<quality> <!-- ronin bio/def -->
+			<id>46b06455-9921-4376-b830-17d8cb4f5bc7</id>
+			<name>Ronin (Bioware/Defense)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Ronin (Bioware/DV)</quality>
+					<quality>Ronin (Cyberware/DV)</quality>
+					<quality>Ronin (Cyberware/Defense)</quality>
+					<quality>Biocompatibility (Cyberware)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>{WIL}+{INT}</attributes>
+						<val>7</val>						
+					</attributetotal>
+					<streetcredvsnotoriety />
+				</allof>
+			</required>
+			<bonus>
+				<biowareessmultiplier>90</biowareessmultiplier>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality reduce the Essence Cost of bioware or cyberware implants (choose one) by 10%, rounded down to the tenth. This rebate is cumulative with the reduction offered by the chosen ’ware’s grade, if any (e.g., the reduction for alphaware of 0.8 is reduced by ten percent, or 0.08, to become 0.72, and is rounded down to 0.7). This bonus is applied to already installed augmentations, but will create an appropriately sized essence hole. This discount does not stack with the Biocompatability quality. In addition, they may choose one of the following: +1 DV with melee attacks, including unarmed; or, when they have a melee weapon readied (with which their skill to use in melee is at least 4 ranks) and are not surprised, +2 to defense tests against melee and ranged attacks. If a Ronin’s Notoriety ever overtakes his Street Cred, he maintains his Essence discount but loses the DV or Defense bonus.</notes>
+		</quality>
+		<quality> <!-- ronin cyber/def -->
+			<id>a8fce313-75f8-4c79-a430-c718a8a0d7be</id>
+			<name>Ronin (Cyberware/Defense)</name>
+			<karma>20</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+				<oneof>
+					<quality>Ronin (Bioware/DV)</quality>
+					<quality>Ronin (Cyberware/DV)</quality>
+					<quality>Ronin (Bioware/Defense)</quality>
+					<quality>Biocompatibility (Cyberware)</quality>
+				</oneof>
+			</forbidden>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>{WIL}+{INT}</attributes>
+						<val>7</val>
+					</attributetotal>
+					<streetcredvsnotoriety />
+				</allof>
+			</required>
+			<bonus>
+				<cyberwareessmultiplier>90</cyberwareessmultiplier>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality reduce the Essence Cost of bioware or cyberware implants (choose one) by 10%, rounded down to the tenth. This rebate is cumulative with the reduction offered by the chosen ’ware’s grade, if any (e.g., the reduction for alphaware of 0.8 is reduced by ten percent, or 0.08, to become 0.72, and is rounded down to 0.7). This bonus is applied to already installed augmentations, but will create an appropriately sized essence hole. This discount does not stack with the Biocompatability quality. In addition, they may choose one of the following: +1 DV with melee attacks, including unarmed; or, when they have a melee weapon readied (with which their skill to use in melee is at least 4 ranks) and are not surprised, +2 to defense tests against melee and ranged attacks. If a Ronin’s Notoriety ever overtakes his Street Cred, he maintains his Essence discount but loses the DV or Defense bonus.</notes>
+		</quality>
+		<quality> <!-- marksman -->
+			<id>e22b3ae3-524a-43a5-b26d-8139fc0cc88e</id>
+			<name>Marksman</name>
+			<karma>10</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<ess>-3.0</ess>
+				</oneof>
+				<oneof>
+					<cyberware>Attention Coprocessor</cyberware>
+					<bioware>Reflex Recorder</bioware>
+					<cyberware>Smartlink</cyberware>
+					<cyberware>Targeting Laser</cyberware>
+					<cyberware>Vision Magnification</cyberware>
+				</oneof>
+			</required>
+			<bonus>
+				<specificskill>
+				  <name>Sneaking</name>
+				  <bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>Characters with this quality are not required to halve their Willpower when calculating how many Take Aim actions they may perform with a ranged weapon. This quality also grants a +1 bonus to the Sneak skill.</notes>
+		</quality>
+		<quality> <!-- street ninja -->
+			<id>b4ece114-1de1-4960-8c39-2452109c1980</id>
+			<name>Street Ninja</name>
+			<karma>15</karma>
+			<category>Positive</category>
+			<doublecareer>False</doublecareer>
+			<forbidden>
+				<oneof>
+					<magenabled />
+					<resenabled />
+				</oneof>
+			</forbidden>
+			<required>
+				<oneof>
+					<skill>
+						<name>Sneaking</name>
+						<val>6</val>
+					</skill>
+				</oneof>
+				<oneof>
+					<skilltotal>
+						<skills>Gymnastics+Escape Artist</skills>
+						<val>6</val>
+					</skilltotal>
+				</oneof>
+			</required>
+			<bonus>
+				<specificskill>
+				  <name>Sneaking</name>
+				  <bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR5</source>
+			<page>1</page>
+			<notes>When attacking an opponent with a melee or throwing weapons attack, characters with this quality may divide any Called Shot penalties in half.  This is applied before all other effects that reduce called shot penalties and does not stack with the bonus from the Strive for Perfection quality. In addition, they gain +1 die on Surprise Tests and +1 die on Sneak Tests. </notes>
+		</quality>
+		<quality>
+			<id>25c8cbe5-758c-44a9-b926-9e05732d6e8d</id>
+			<name>Dabbler</name>
+			<karma>4</karma>
+			<category>Positive</category>
+			<bonus>
+				<skillcategorykarmacost>
+				  <name>Interest</name>
+				  <val>-1</val>
+				  <min>3</min>
+				  <condition>career</condition>
+				</skillcategorykarmacost>
+				<skillcategorypointcostmultiplier>
+				  <name>Interest</name>
+				  <val>50</val>
+				</skillcategorypointcostmultiplier>
+			</bonus>
+			<source>CRB</source>
+			<page>1</page>
+			<notes>The character can buy Interest Knowledge skills at half price (rounded up) during character creation. After character creation, Interest Knowledge skill ranks of 3 or higher receive a 1 Karma cost reduction for each rank.</notes>
+		</quality>
+		<quality>
+    <id>63257aff-e7fa-448f-833f-4c370d124ac4</id>
+      <name>Chemical Attunement</name>
+      <karma>10</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+      <bonus>
+        <selecttext />
+      </bonus>
+		<forbidden>
+        <oneof>
+		  <magenabled />
+          <resenabled />
+          <depenabled />
+        </oneof>
+		</forbidden>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+<quality>
+    <id>1402f62e-b61b-4d2f-a35e-9952dfcfc148</id>
+      <name>There Are No Strings On Me</name>
+      <karma>5</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+		<forbidden>
+			<oneof>
+				<magenabled />
+				<resenabled />
+				<depenabled />
+			</oneof>
+		</forbidden>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>262b80d4-e695-405c-a2d9-745f86e9b553</id>
+      <name>I AM WHO I AM</name>
+      <karma>10</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+		<forbidden>
+			<oneof>
+				<magenabled />
+				<resenabled />
+				<depenabled />
+			</oneof>
+		</forbidden>
+		<required>
+        <allof>
+          <attribute>
+            <name>WIL</name>
+            <total>5</total>
+          </attribute>
+        </allof>
+		</required>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>fc58f364-bde4-4b60-a880-2d90dc84a033</id>
+      <name>Immortal Blade Mastery</name>
+      <karma>15</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+		<forbidden>
+			<oneof>
+				<magenabled />
+				<resenabled />
+				<depenabled />
+			</oneof>
+		</forbidden>
+		<required>
+			<oneof>
+				<group>
+					<skill>
+						<name>Blades</name>
+						<val>8</val>
+					</skill>
+				</group>
+				<group>
+					<skill>
+						<name>Clubs</name>
+						<val>8</val>
+					</skill>
+				</group>	
+				<group>
+					<skill>
+						<name>Unarmed Combat</name>
+						<val>8</val>
+					</skill>
+				</group>				
+			</oneof>
+		</required>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>977623a2-c679-44e9-a336-ec8d806826e4</id>
+      <name>Yeoman</name>
+      <karma>4</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+		<forbidden>
+			<oneof>
+				<magenabled />
+				<resenabled />
+				<depenabled />
+			</oneof>
+		</forbidden>
+		<required>
+			<oneof>
+				<group>
+					<skill>
+						<name>Archery</name>
+						<val>6</val>
+					</skill>
+				</group>			
+			</oneof>
+		</required>			
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>ab3fc7dc-8f8f-4ff2-aeb6-8668424d21cf</id>
+      <name>Only (Meta)Human</name>
+      <karma>5</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+		<forbidden>
+			<oneof>
+				<magenabled />
+				<resenabled />
+				<depenabled />
+			</oneof>
+		</forbidden>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>756cfaef-6a80-4ebf-a440-b26b374dd90f</id>
+      <name>Noblesse Oblige</name>
+      <karma>5</karma>
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>4ac6d86f-8d7a-40fb-851e-8bbd3723a574</id>
+      <name>Bad Cop</name>
+      <karma>10</karma>
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>00b5c57e-552e-4c2f-91aa-3b7d1fcf3720</id>
+      <name>Work It Harder!</name>
+      <karma>5</karma>
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>b225a0d0-09bf-4ef1-b1e6-b6d85cfc5983</id>
+      <name>Quiz Show Contestant</name>
+      <karma>1</karma>
+      <category>Positive</category>
+		<required>
+        <allof>
+          <quality>
+            <name>Photographic Memory</name>
+          </quality>
+        </allof>
+		</required>		  
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>3e22f26f-06fd-4932-b929-a605318eae35</id>
+      <name>Like a Part of Me</name>
+      <karma>5</karma>
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>9f230768-675b-48f2-a136-3f2612dcd19d</id>
+      <name>Fanning</name>
+      <karma>5</karma>
+      <category>Positive</category>
+		<required>
+        <allof>
+          <attribute>
+            <name>AGI</name>
+            <total>3</total>
+          </attribute>
+        </allof>
+		</required>			
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>4a412bb4-14aa-486a-b120-38e6d2f7fe13</id>
+      <name>Levering</name>
+      <karma>5</karma>
+      <category>Positive</category>
+		<required>
+        <allof>
+          <attribute>
+            <name>AGI</name>
+            <total>3</total>
+          </attribute>
+        </allof>
+		</required>			
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>4a3cf981-8e96-4282-94a2-d31bfc136355</id>
+      <name>Cyberpersonalization</name>
+      <karma>4</karma>
+      <category>Positive</category>	
+	  <limit>99</limit>
+      <required>
+        <oneof>
+          <ess grade="Betaware,Deltaware,Gammaware">1</ess>
+        </oneof>
+      </required>	  
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+    <quality>
+      <id>2c1cf542-8dde-44c0-ae0c-d317ac485c79</id>
+      <name>Far-Running Connections</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <bonus>
+        <restrictedgear>
+          <availability>14</availability>
+          <amount>10</amount>
+        </restrictedgear>
+      </bonus>
+      <required>
+        <oneof>
+          <quality>Black Market Pipeline</quality>
+        </oneof>
+      </required>	  
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+<quality>
+    <id>3c6d6314-cbaf-427f-93bf-d118a430eeac</id>
+      <name>Arm Candy</name>
+      <karma>5</karma>
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>99ec1f22-7db8-40fb-9ca0-2f43b9578cb7</id>
+      <name>Drone Commander</name>
+      <karma>7</karma>
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>a3f53f8d-8a63-46e2-a255-b6d711c6c88f</id>
+      <name>Dogbrain Whisperer</name>
+      <karma>7</karma>
+      <required>
+        <oneof>
+          <skill>
+            <name>Software</name>
+            <val>3</val>
+          </skill>
+        </oneof>
+      </required>	  
+      <category>Positive</category>		
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>80f615ed-5eea-4a96-864d-a079f47fe433</id>
+      <name>Hidden Genius</name>
+      <karma>5</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+      <bonus>
+		<selectskill>
+			<specificskill>Biotechnology</specificskill>
+			<specificskill>Cybertechnology</specificskill>
+		</selectskill>
+      </bonus>
+		<required>
+			<allof>
+				<quality>Dimmer Bulb</quality>
+			</allof>
+		</required>
+      <source>SR5</source>
+    <page>5</page>
+</quality>	
+
+<quality>
+    <id>d6e14988-8f79-405a-9ad0-3ddf5a247a18</id>
+      <name>Handyman</name>
+      <karma>7</karma>
+      <category>Positive</category>
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+
+<quality>
+    <id>405e55cc-28e6-4f01-9707-d7ae58c354fd</id>
+      <name>It Takes one to Know One</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<!-- Awakened Mastery Qualities-->
+
+<quality>
+    <id>2533106b-1ec7-4c20-b834-b026a6bb9f9d</id>
+      <name>That Little Spark</name>
+      <karma>1</karma>
+      <category>Positive</category>
+	  <doublecareer>False</doublecareer>
+      <bonus>
+        <selecttext />
+      </bonus>
+		<required>
+			<oneof>
+				<magenabled />
+				<resenabled />
+			</oneof>
+		</required>
+      <source>SR5</source>
+    <page>5</page>
+</quality>
+<quality>
+    <id>7e94bc17-3621-41d1-9571-7bbf0c58a7ea</id>
+      <name>Body Language Expert</name>
+      <karma>15</karma>
+      <category>Positive</category>
+      <source>SR5</source>
+		<required>
+			<allof>
+            <skill>
+              <name>Psychology</name>
+              <val>4</val>
+              <type>Knowledge</type>
+            </skill>
+			</allof>
+		</required>	  
+    <page>5</page>
+</quality>
+<!-- Mundane Metagenic Positive -->
+
+    <quality>
+      <id>bde649a1-2d25-484a-8492-d39dd82f7472</id>
+      <name>Astral Hazing (Mundane)</name>
+      <karma>7</karma>
+      <category>Positive</category>
+        <forbidden>
+          <oneof>
+            <quality>Aspected Magician</quality>
+            <quality>Enchanter</quality>
+            <quality>Explorer</quality>
+            <quality>Apprentice</quality>
+            <quality>Magician</quality>
+            <quality>Aware</quality>
+            <quality>Mystic Adept</quality>
+            <quality>Adept</quality>
+            <quality>Infected: Mutaqua</quality>
+            <quality>Infected: Nosferatu</quality>
+            <quality>Infected: Wendigo</quality>
+          </oneof>
+        </forbidden>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>RF</source>
+      <page>119</page>
+    </quality>
+	
+	<!-- Additional Positive SURGE Qualities -->
+	
+	<quality>
+      <id>c18dd10f-f68a-4a26-80cb-10e4585c9468</id>
+      <name>Regrowth</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+  	<quality>
+      <id>c5a614dc-2393-4ba9-93b1-d1f356e1cd7e</id>
+      <name>Electrogenesis</name>
+      <karma>13</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+	  <bonus />
+	  <naturalweapons>
+		<naturalweapon>
+			<name>Electrogenesis</name>
+			<reach>0</reach>
+			<damage>({BOD})S (e)</damage>
+			<ap>-5</ap>
+			<useskill>Unarmed Combat</useskill>
+			<accuracy>Physical</accuracy>
+			<source>SR5</source>
+			<page>5</page>
+		</naturalweapon>
+	  </naturalweapons>
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+    <quality>
+      <id>f0a15e52-04eb-4a65-85b2-df9c8e565795</id>
+      <name>Ink</name>
+      <karma>8</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+	  <bonus />
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+	<quality>
+      <id>af5d9577-eb3f-435b-a6a1-664d6c959e55</id>
+      <name>Wings I</name>
+      <karma>12</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+	  <bonus>
+		<damageresistance>-1</damageresistance>
+        <movementreplace>
+          <category>Fly</category>
+          <speed>sprint</speed>
+          <val>300</val>
+        </movementreplace>
+	  </bonus>
+	  <naturalweapons>
+		<naturalweapon>
+			<name>Wing Claws</name>
+			<reach>0</reach>
+			<damage>({STR}+2)P</damage>
+			<ap>-2</ap>
+			<useskill>Unarmed Combat</useskill>
+			<accuracy>Physical</accuracy>
+			<source>SR5</source>
+			<page>5</page>
+		</naturalweapon>
+	  </naturalweapons>
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+	  <forbidden>
+        <oneof>
+          <quality>Wings II</quality>
+		  <quality>Wings III</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+	<quality>
+      <id>62f18c03-5d4d-419e-b20a-a06b17ca6e55</id>
+      <name>Wings II</name>
+      <karma>15</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+	  <bonus>
+		<movementreplace>
+          <category>Fly</category>
+          <speed>sprint</speed>
+          <val>300</val>
+        </movementreplace>
+	  </bonus>
+	  <naturalweapons>
+		<naturalweapon>
+			<name>Wing Claws</name>
+			<reach>0</reach>
+			<damage>({STR}+2)P</damage>
+			<ap>-2</ap>
+			<useskill>Unarmed Combat</useskill>
+			<accuracy>Physical</accuracy>
+			<source>SR5</source>
+			<page>5</page>
+		</naturalweapon>
+	  </naturalweapons>
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+	  <forbidden>
+        <oneof>
+          <quality>Wings I</quality>
+		  <quality>Wings III</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+	<quality>
+      <id>3488550a-9c0d-4c84-a60b-1618a0ae3603</id>
+      <name>Wings III</name>
+      <karma>20</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+	  <bonus>
+		<damageresistance>-2</damageresistance>
+		<movementreplace>
+          <category>Fly</category>
+          <speed>sprint</speed>
+          <val>300</val>
+        </movementreplace>
+	  </bonus>
+	  <naturalweapons>
+		<naturalweapon>
+			<name>Wing Claws</name>
+			<reach>0</reach>
+			<damage>({STR}+2)P</damage>
+			<ap>-2</ap>
+			<useskill>Unarmed Combat</useskill>
+			<accuracy>Physical</accuracy>
+			<source>SR5</source>
+			<page>5</page>
+		</naturalweapon>
+	  </naturalweapons>
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+	  <forbidden>
+        <oneof>
+          <quality>Wings I</quality>
+		  <quality>Wings II</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+  <!-- Additional Negative SURGE Qualities -->
+
+	<quality>
+      <id>2147778d-3044-499c-a0f8-fe19a8ae9e64</id>
+      <name>Striking Sclera</name>
+      <karma>-3</karma>
+      <category>Negative</category>
+	  <metagenic>True</metagenic>
+	  <bonus />      
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+    <quality>
+      <id>4602cf2e-bb81-45c6-8b73-42907c2258c4</id>
+      <name>Slime Coating</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+	  <bonus />  
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+    <quality>
+      <id>f19c5a65-6413-49e6-b73b-68016b3709e7</id>
+      <name>Cutaneous Hydration</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+	  <bonus />  
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+	<quality>
+      <id>f4173147-e54e-42a2-8670-b4625698f40f</id>
+      <name>Lamia Body</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+	  <bonus>
+	    <movementreplace>
+		  <category>Ground</category>
+          <speed>walk</speed>
+          <val>1</val>
+		</movementreplace>
+		<movementreplace>
+          <category>Ground</category>
+          <speed>run</speed>
+          <val>2</val>
+        </movementreplace>
+	  </bonus>
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+    <quality>
+      <id>b1b49211-3bbe-4833-b6f0-6b0759a6da61</id>
+      <name>Shark Trance</name>
+      <karma>-9</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+	  <bonus />
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+	<quality>
+      <id>2d4e2a62-8b5d-4bc2-bae2-2792269fa5a9</id>
+      <name>Aural Helix Dysmorphia (AHD)</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+	  <metagenic>True</metagenic>
+	  <bonus />      
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+	<quality>
+      <id>52e68d36-937a-422a-b812-6ffdd26b91a2</id>
+      <name>Broad Feet</name>
+      <karma>-6</karma>
+      <category>Negative</category>
+	  <metagenic>True</metagenic>
+      <bonus>
+        <skillcategory>
+          <name>Physical Active</name>
+          <bonus>-1</bonus>
+        </skillcategory>
+      </bonus>     
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+
+	<quality>
+      <id>69e67401-96cd-4245-9054-a48593ec38f3</id>
+      <name>Reflective Eyes</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+	  <metagenic>True</metagenic> 
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>	
+
+	<quality>
+      <id>cbc30758-ca0c-429e-8c06-f9962bce4df4</id>
+      <name>Mad Eyes</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+	  <metagenic>True</metagenic> 
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>
+	
+	<quality>
+      <id>9ff69ead-778b-4919-bb8a-c026f5b1abf1</id>
+      <name>Hairless</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+	  <metagenic>True</metagenic> 
+      <required>
+        <oneof>
+          <quality>Changeling (Class I SURGE)</quality>
+          <quality>Changeling (Class II SURGE)</quality>
+          <quality>Changeling (Class III SURGE)</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>5</page>
+    </quality>	
+	
+</qualities>
+</chummer>

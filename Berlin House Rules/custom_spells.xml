@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--This file is part of Chummer5a.
+
+    Chummer5a is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Chummer5a is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+    You can obtain the full source code for Chummer5a at
+    https://github.com/chummer5a/chummer5a
+-->
+<chummer>
+	<spells>
+	
+	<!-- Combat -->
+    <spell>
+      <id>50868e27-116c-451d-9d54-5b00bf47184c</id>
+      <name>Moonbeam</name>
+      <page>17</page>
+      <source>SSP</source>
+      <category>Combat</category>
+      <damage>P</damage>
+      <descriptor>Indirect</descriptor>
+      <duration>I</duration>
+      <dv>F-1</dv>
+      <range>LOS</range>
+      <type>P</type>
+    </spell>	
+
+    <spell>
+      <id>792e6705-b1ac-438d-8144-910233a54c66</id>
+      <name>Glare</name>
+      <page>5</page>
+      <source>SR5</source>
+      <category>Manipulation</category>
+      <descriptor>Physical</descriptor>
+      <duration>S</duration>
+      <dv>F-2</dv>
+      <range>Self</range>
+      <type>P</type>
+    </spell>
+
+    <spell>
+      <id>cc6526bf-8afb-44d8-a819-36272084b5c7</id>
+      <name>Radiance</name>
+      <page>5</page>
+      <source>SR5</source>
+      <category>Manipulation</category>
+      <descriptor>Physical</descriptor>
+      <duration>S</duration>
+      <dv>F-1</dv>
+      <range>Self</range>
+      <type>P</type>
+    </spell>	
+	
+	</spells>
+</chummer>
