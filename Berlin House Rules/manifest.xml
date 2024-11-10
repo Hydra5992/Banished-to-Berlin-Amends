@@ -18,8 +18,8 @@
     https://github.com/chummer5a/chummer5a
 -->
 <manifest xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema ../manifest.xsd">
-  <guid>f3caa6bf-9ba4-445b-8697-c0f7993e6230</guid>
-  <version>1.0</version>
+  <guid>736762a3-3d7f-4158-9b5c-62692a97f67f</guid>
+  <version>1.1.1</version>
   <authors>
     <author>
       <name>Cal</name>
